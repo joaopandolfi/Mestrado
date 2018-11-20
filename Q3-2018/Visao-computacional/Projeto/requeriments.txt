@@ -1,0 +1,7 @@
+scikit-image
+Pillow
+Keras
+numpy
+pandas
+cv2
+sklearn
