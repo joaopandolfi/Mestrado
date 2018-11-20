@@ -2,6 +2,9 @@
 
 Projeto desenvolvido durante a disciplina de visão computacional
 
+## Download
+* Para fazer download da pasta zipada [Clique aqui](folder.zip)
+
 ## Requerimentos
 * Versão do python: *Python3*
 ```
