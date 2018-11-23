@@ -1,0 +1,177 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Q3.2018 - Metodologia de pesquisa - Revisão sistemática}
+\author{João Carlos Pandolfi Santana }
+\date{November 2018}
+
+\usepackage{natbib}
+\usepackage{graphicx}
+
+% ---------------------------------------
+% parsif.al
+% https://parsif.al/joaopandolfi/mestrado-metodologia-de-pesquisa/conducting/search/
+%
+% ---------------------------------------
+
+\begin{document}
+
+\maketitle
+
+\section{Informações gerais}
+\subsection{Título}
+Uma revisão sistemática de \emph{transference learning} e \emph{visão computacional} voltada para classificação e segmentação de espécies de mosquitos.
+
+\subsection{Descrição}
+Revisão sistemática com o foco em \emph{transference learning} e \emph{visão computacional} baseada em \emph{redes neurais}, com o intuito de classificar espécies de mosquitos. Também pretendo abranger materiais relacionados a estrutura corporal, cladística e filogênica dos insetos em questão.
+
+\subsection{Objetivos}
+Revisar a literatura a fim de encontrar material de estudo e apoio na área de \emph{transference learning}, além de embasar e direcionar minha pesquisa levando em consideração trabalhos relacionados. Também tenho como objetivo identificar possíveis caminhos a serem seguidos durante a condução do meu projeto de mestrado, procurando não esbarrar ou gastar energia desnecessária em frentes de pesquisa já consolidadamente exploradas, mas sim usá-las como ferramental para a minha contribuição.
+
+%\section{Questões de pesquisa}
+%----
+
+\section{Proposta} 
+\subsection{Problema de pesquisa}
+O problema abordado é a identificação por imagem de espécies de mosquito, de forma a agilizar e aumentar a eficiência de agentes de saúde e pesquisadores de campo em relação a epidemiologia e controle dos vetores de doença.
+
+\subsection{Objetivos}
+O objetivo principal é fazer uma revisão da literatura, onde possa reunir os trabalhos relacionados e partir de um problema em aberto ou otimizar alguma etapa ineficiente.
+Outro objetivo é mapear as técnicas utilizadas e propor uma nova e mais eficiente para classificação de mosquitos. Tenho como objetivo final, desenvolver uma ferramenta mobile, no qual facilite a identificação do espécime capturado.
+Por fim, também pretendo revisar conceitos de aprendizado de máquina, que possam ser aplicados na pesquisa, como por exemplo, \emph{transference learning} (transferência de aprendizado) onde possa utilizar sistemas especialistas em outras áreas, mas que possuam um certo grau de proximidade computacional do problema, de modo que sejam aplicados para otimização e melhoria no aprendizado do modelo.
+
+\subsection{Hipótese}
+A hipótese inicial é que não haja muita pesquisa relacionada ao tema proposto, devido ao fato dos estudos serem voltados, na sua maior parte, a doenças e migração dos vetores não na identificação computacional dos espécimes, também levo em conta que pelos insetos serem muito pequenos e dependerem de captura para análise, os pesquisadores que fazem a coleta já são capacitados para identificar o espécime, não abrindo tanta abertura para o problema de classificação destes. No entanto, viso desenvolver uma ferramenta para facilitar e reduzir o viés desta classificação, facilitando assim a análise em regiões que não possuam muitos especialistas e também permitir um pessoal menos treinado a fazer a primeira etapa da pesquisa, a identificação do espécime.
+
+\subsection{Métodos}
+Como a a hipótese se baseia em não ter muita pesquisa relacionada ao tema proposto,  procurarei conteúdo relacionado a classificação de imagem utilizando ferramental computacional que pretendo usar na pesquisa, assim como procurar material relacionado a estrutura corporal e classificação morfológica dos insetos a serem estudados.
+
+\subsection{Resultados esperados}
+Espero encontrar uma grande quantidade de conteúdo sobre classificação de imagens e conteúdo relacionado a morfologia de insetos. Assim como modelos e métodos previamente validados de \emph{transference learning} e visão computacional para basear minha pesquisa. 
+Pretendo encontrar também, caso haja, pesquisas relacionadas ao tema proposto, de forma que possa seguir por caminhos consolidados e explorar conceitos ainda não estudados, assim, possa contribuir não só com o produto final produzido, mas também com técnicas computacionais novas ou aplicadas em áreas inexploradas.
+
+
+\section{Identificação de estudos}
+\subsection{Palavras chave}
+\emph{Transference learning, machine learning, computational vision,  neural network, convolutional network, image classification cross validation ,classification, image segmentation, mosquito, mosquitos, insect, visão computacional, aprendizado de máquina, redes neurais, classificação de imagens, segmentação de imagem, insetos }
+
+\subsection{Strings de busca}
+\label{cap:string_busca}
+Strings de busca utilizadas durante a revisão sistemática
+
+\begin{itemize}
+
+    \item Parsifall
+    \begin{enumerate}
+        \item "transference learning" AND ("neural network" OR "neural networks") AND (mosquito OR mosquitos OR insect OR insects)
+        
+        \item ("transference learning" OR "machine learning" ) AND ("mosquito" OR "mosquito")
+        
+        \item ("classification" ) AND ("mosquito" OR "mosquito")
+    
+        \item \textbf{("neural network" ) AND ("classification") AND ("mosquito" OR "mosquitos")}
+    
+        \item \textbf{"transference" AND "learning" AND "machine"}
+        
+
+    \end{enumerate}
+
+    \item Google Scholar
+    \begin{enumerate}
+        \item transference learning machine 
+    
+        \item transductive learning
+    
+        \item transductive learning on insects classification
+        
+        \item image mosquito classification
+    \end{enumerate}
+    
+\end{itemize}
+
+\subsection{Critério de seleção das fontes de busca}
+O primeiro critério para seleção da fonte, foi a base ser internacional, assim eu tenho acesso a uma quantidade de artigos maior e consequentemente das maiores universidades e centros de pesquisa.
+
+O segundo critério foram bases de dados relacionadas a publicações na área de ciência da computação, ou seja, não foram incluídas bases de dados que não tem a ver com o tema de pesquisa, esse critério foi adicionado para evitar ruído na pesquisa.
+
+O terceiro e último critério, foi o uso do \emph{google scholar} para refinamento final da pesquisa, onde o objetivo foi pesquisar com um espectro mais amplo, vai de encontro com o segundo critério onde o objetivo é exatamente não ficar preso no espectro definido. O objetivo é somente verificar a relevância e qualidade da \emph{string} de busca, para garantir a assertividade, ou seja, se ao buscar numa base mais abrangente o resultado for próximo do encontrado na base mais específica, a \emph{string} está boa.
+
+\subsection{Estratégia de busca}
+A primeira etapa, foi a definição das strings de busca. O critério de qualidade de cada \emph{string}, foi definida pela quantidade de resultados em relação a correspondência do material apresentado com o tema da pesquisa. A sequência de \emph{strings} utilizadas se encontram na seção \ref{cap:string_busca}.
+
+Após identificar as \emph{strings} mais promissoras, utilizei a ferramenta de busca avançada \emph{parsif.al}, onde adicionei os resultados em uma planilha no formato \emph{.csv}. Filtrei os resultados obtidos pelo título com os critérios de \emph{inclusão}~\ref{cap:crit_inclusao} e \emph{exclusão}~\ref{cap:crit_exclusao}. 
+
+Por final, utilizei a ferramenta \emph{Google Scholar} para pesquisar artigos relacionados e verificar a qualidade das \emph{strings} de busca, ao ponto que dependendo da correlação dos resultados obtidos com o tema de pesquisa, pude verificar se as buscas anteriores foram assertivas.
+
+\section{Seleção e avaliação de estudos}
+\subsection{Critérios de inclusão}
+\label{cap:crit_inclusao}
+\begin{enumerate}
+    \item Conter as palavras chave
+    \item Ser relacionado com: 
+    \begin{itemize}
+        \item Machine Learning
+        \item Transference Learning
+        \item Transductive Learning
+        \item Image Processing
+        \item Image Classification
+        \item Mosquito Classification
+        \item Insect Classification
+    \end{itemize}
+\end{enumerate}
+
+\subsection{Critérios de exclusão}
+\label{cap:crit_exclusao}
+\begin{enumerate}
+    \item Fugir dos temas
+    \item Não abranger sistemas de informação
+    \item Não utilizar machine learning
+    \item Não ter acesso ao pdf 
+\end{enumerate}
+
+
+\subsection{Estratégia para seleção}
+Após o filtro pelo título dos trabalhos, fui para a leitura do \emph{abstract}, onde utilizei novamente os critérios de \emph{inclusão} e \emph{exclusão} para selecionar os artigos que fizessem sentido. Por fim, após as três etapas de filtragem citadas, parti para leitura dos arquivos selecionados
+Pesquisei no google scholar para não ficar na bolha das bases selecionadas e usar o algoritmo de sugestão do google.
+
+
+\subsection{Avaliação da qualidade}
+\begin{itemize}
+    \item Quantidade de citações
+    \item Correlação com o conteúdo pesquisado
+    \item Profundidade da pesquisa
+    \item Ferramentas utilizadas parecidas com as que pretendo usar
+    \item Bons resultados
+    \item Relevância da publicação
+    \item Tipo de publicação
+    \item Citação por artigo relevante, ou seja, um artigo relevante cita
+\end{itemize}
+
+\section{Discussão}
+Ao contrário do que previ na hipótese inicial encontrei bastante material relacionado a pesquisa, em contrapartida a maioria dos resultados das buscas foram sobre as doenças vetorizadas por mosquitos e estudos sobre migração e comportamento dos insetos. No quesito de aprendizado computacional, obtive bastante conteúdo de qualidade, o que irá ajudar bastante no desenvolvimento do projeto.
+
+Tive bastante dificuldade ao selecionar conteúdos relacionados a computação, em vista que, muito material tem sido produzido na última década devido ao aumento do poder de processamento dos computadores e popularização das técnicas de aprendizado computacional. Para chegar aos artigos mais relevantes, dei ênfase aos mais citados e me vali de consultoria a professores da área para indicação e direcionamento da pesquisa.
+
+Quanto aos trabalhos que têm como tema os insetos e sua morfologia, apesar de encontrar bastante artigo sobre o assunto, a maioria destes apontavam para livros, exceto os que tratavam de algum assunto específico estudado, como o \cite{Lorenz2017} que trata da geometria morfométrica de mosquitos (no qual, acredito eu, ser uma chave para identificação de \emph{features} da pesquisa da qual conduzirei). Os livros foram um pouco mais difíceis de se obter, em vista que são comprados, porém consegui acesso aos conteúdos e consegui adicionar a minha base de pesquisa.
+
+\section{Conclusão}
+A pesquisa foi mais árdua do que imaginei que seria, contudo, obtive resultados que se mostram promissores, devido ao fato de alguns deles serem diretamente relacionados com a minha proposta de pesquisa e apresentarem resultados positivos. Assim como consegui materiais de suporte para desenvolvimento direcionado das etapas que precisarei transpor para concluir a pesquisa.
+
+Em relação a classificação de mosquitos, encontrei estudos que desenvolveram o que propus estudar, porém não englobam todo o escopo que havia definido, os que tornam uma ótima base de pesquisa e pontapé inicial, assim como prova de conceito que de viabilidade. 
+
+\subsection{Agradecimentos}
+Agradeço aos professores da disciplina por me apoiarem e disponibilizarem material de apoio e tempo para que fosse possível o desenolvimento deste trabalho.
+
+
+%\begin{figure}[h!]
+%\centering
+%\includegraphics[scale=1.7]{universe}
+%\caption{The Universe}
+%\label{fig:universe}
+%\end{figure}
+
+%\citep{adams1995hitchhiker}
+
+\bibliographystyle{plain}
+\bibliography{references}
+\end{document}
