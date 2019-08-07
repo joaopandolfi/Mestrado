@@ -1,0 +1,105 @@
+version: '2'
+services:
+    sharelatex:
+        restart: always
+        image: sharelatex/sharelatex
+        container_name: sharelatex
+        depends_on:
+            - mongo2
+            - redis
+        privileged: true
+        ports:
+            - 80:80
+        links:
+            - mongo2
+            - redis
+        volumes:
+            - ~/sharelatex_data:/var/lib/sharelatex
+            - /var/run/docker.sock:/var/run/docker.sock
+        environment:
+            SHARELATEX_MONGO_URL: mongodb://mongo2/sharelatex
+            SHARELATEX_REDIS_HOST: redis
+            SHARELATEX_APP_NAME: Our ShareLaTeX
+            
+            ## Set for SSL via nginx-proxy
+            #VIRTUAL_HOST: 103.112.212.22
+
+            # SHARELATEX_SITE_URL: http://sharelatex.mydomain.com
+            # SHARELATEX_NAV_TITLE: Our ShareLaTeX Instance
+            # SHARELATEX_HEADER_IMAGE_URL: http://somewhere.com/mylogo.png
+            # SHARELATEX_ADMIN_EMAIL: support@it.com
+
+            # SHARELATEX_LEFT_FOOTER: '[{"text": "Powered by <a href=\"https://www.sharelatex.com\">ShareLaTeX</a> 2016"},{"text": "Another page I want to link to can be found <a href=\"here\">here</a>"} ]'
+            # SHARELATEX_RIGHT_FOOTER: '[{"text": "Hello I am on the Right"} ]'
+
+            # SHARELATEX_EMAIL_FROM_ADDRESS: "team@sharelatex.com"
+
+            # SHARELATEX_EMAIL_AWS_SES_ACCESS_KEY_ID: 
+            # SHARELATEX_EMAIL_AWS_SES_SECRET_KEY: 
+
+            # SHARELATEX_EMAIL_SMTP_HOST: smtp.mydomain.com
+            # SHARELATEX_EMAIL_SMTP_PORT: 587
+            # SHARELATEX_EMAIL_SMTP_SECURE: false
+            # SHARELATEX_EMAIL_SMTP_USER: 
+            # SHARELATEX_EMAIL_SMTP_PASS: 
+            # SHARELATEX_EMAIL_SMTP_TLS_REJECT_UNAUTH: true
+            # SHARELATEX_EMAIL_SMTP_IGNORE_TLS: false
+            # SHARELATEX_CUSTOM_EMAIL_FOOTER: "<div>This system is run by department x </div>"
+
+            ################
+            ## Server Pro ##
+            ################
+
+            # SANDBOXED_COMPILES: 'true'
+            
+            # SANDBOXED_COMPILES_SIBLING_CONTAINERS: 'true'
+            # SANDBOXED_COMPILES_HOST_DIR: '/var/clsi/compiles'
+
+            ## Works with test LDAP server shown at bottom of docker compose
+            # SHARELATEX_LDAP_URL: 'ldap://ldap:389'
+            # SHARELATEX_LDAP_SEARCH_BASE: 'ou=people,dc=planetexpress,dc=com'
+            # SHARELATEX_LDAP_SEARCH_FILTER: '(uid={{username}})'
+            # SHARELATEX_LDAP_BIND_DN: 'cn=admin,dc=planetexpress,dc=com'
+            # SHARELATEX_LDAP_BIND_CREDENTIALS: 'GoodNewsEveryone'
+            # SHARELATEX_LDAP_EMAIL_ATT: 'mail'
+            # SHARELATEX_LDAP_NAME_ATT: 'cn'
+            # SHARELATEX_LDAP_LAST_NAME_ATT: 'sn'
+            # SHARELATEX_LDAP_UPDATE_USER_DETAILS_ON_LOGIN: 'true'
+
+            # SHARELATEX_TEMPLATES_USER_ID: "578773160210479700917ee5"
+
+            # SHARELATEX_PROXY_LEARN: "true"
+
+    mongo2:
+        restart: always
+        image: mongo
+        container_name: mongo2
+        expose:
+            - 27017
+        volumes:
+            - ~/mongo_data:/data/db
+
+    redis:
+        restart: always
+        image: redis
+        container_name: redis
+        expose:
+            - 6379
+        volumes:
+            - ~/redis_data:/data
+
+    # ldap:
+    #    restart: always
+    #    image: rroemhild/test-openldap
+    #    container_name: ldap
+    #    expose:
+    #        - 389
+# nginx-proxy:
+#     image: jwilder/nginx-proxy
+#     container_name: nginx-proxy
+#     ports:
+#       #- "80:80"
+#       - "443:443"
+#     volumes:
+#       - /var/run/docker.sock:/tmp/docker.sock:ro
+#       - /home/sharelatex/tmp:/etc/nginx/certs
