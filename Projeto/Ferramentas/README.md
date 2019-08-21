@@ -1,3 +1,6 @@
+# Sharelatex
+Local Sharelatex tool using docker
+
 ## RUN
 docker-compose up
 
